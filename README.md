@@ -1,28 +1,41 @@
 # parallel-claude-designs
 
+16 Claude Code instances, 16 ReactBits-inspired SPA components, all running in parallel.
+
 ## How it works
 
 1. Creates a [git worktree](https://git-scm.com/docs/git-worktree) per style
-2. Launches `claude -p` in each worktree with `&` (background)
-3. Polls for completion, reports live progress
-4. All 8 run simultaneously — zero coordination needed
+2. Injects a design-specific `CLAUDE.md` with visual rules + WCAG 2.2 AA constraints
+3. Launches `claude -p` in each worktree with `&` (background)
+4. Polls for completion, reports live progress
+5. All 16 run simultaneously — zero coordination needed
 
-The `Deleted branch design-*` lines you see on re-runs are a safety net — `git worktree add -b` fails if the branch already exists from a previous run, so the script cleans up before creating fresh worktrees.
+The `Deleted branch design-*` lines on re-runs are a safety net — `git worktree add -b` fails if the branch already exists, so the script cleans up before creating fresh worktrees.
 
-![Demo](https://github.com/user-attachments/assets/bfa12fb3-da27-4944-bcf6-985fb7731560)
+## Designs
 
-## Styles
+Each design produces a single self-contained `index.html` (inline CSS + JS, no dependencies).
 
-| Style | Task |
-|-------|------|
-| brutalist | Developer portfolio |
-| glassmorphism | Weather dashboard |
-| apple-clean | Product launch page |
-| retro-90s | Personal homepage |
-| material3 | Admin dashboard |
-| cyberpunk | Crypto trading terminal |
-| swiss-typography | Design agency landing page |
-| zen-minimal | Meditation app onboarding |
+| # | Style | Page Type | ReactBits Effect |
+|---|-------|-----------|-----------------|
+| 1 | aurora-blur | Hero Section | Aurora Blur — animated gradient blobs |
+| 2 | particle-text | About Page | Particle Text — canvas scatter/reform |
+| 3 | liquid-morph | Tour Gallery | Liquid Swap — SVG displacement morph |
+| 4 | glass-flow | Dashboard | Glass Flow — frosted cards + glass cursor |
+| 5 | silk-waves | Waitlist Landing | Silk Waves — SVG ribbon waves |
+| 6 | letter-flip | Profile Page | 3D Letter Swap — CSS perspective flip |
+| 7 | halftone-spiral | Contact Form | Halftone Vortex — Fermat spiral dots |
+| 8 | gradient-blob | Pricing Page | Gradient Blob — morphing CSS blobs |
+| 9 | shader-glow | Features Page | Shader Card — mouse-tracking iridescent glow |
+| 10 | stagger-cascade | Blog/Articles | Staggered Text — scroll-triggered cascade |
+| 11 | parallax-depth | How It Works | Parallax Cards — 3D mouse-tracking depth |
+| 12 | neon-pulse | Navigation + Hero | Neon Reveal — glow underlines + flicker |
+| 13 | metallic-swirl | Auth/Login | Metallic Swirl — rotating conic gradient |
+| 14 | dot-matrix | Stats/Metrics | Dot Shift — LED-style canvas digits |
+| 15 | flame-trail | Call To Action | Flame Paths — SVG path fire trails |
+| 16 | black-hole | 404 Error | Black Hole — gravity sim + accretion disk |
+
+All designs are tour-planner themed and WCAG 2.2 AA accessible with `prefers-reduced-motion` support.
 
 ## Usage
 
