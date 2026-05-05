@@ -4,9 +4,14 @@ You are building a **tour planner features page** with shader-like glow and hue-
 
 ## Visual Identity
 
-- **Effect**: Feature cards that react to mouse position. As the cursor moves over a card, a radial gradient spotlight follows the cursor position within the card (CSS custom properties updated via JS `mousemove`). The spotlight has a hue-shift animation creating an iridescent/holographic shimmer.
-- **Implementation**: Each card listens for `mousemove`, calculates cursor position relative to card bounds, sets `--mouse-x` and `--mouse-y` CSS variables. Card uses `radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(0,255,136,0.15), transparent 60%)` as an overlay.
-- **Border glow**: Cards have a 1px border that glows brighter near the cursor (same radial gradient on `::before` pseudo-element)
+- **Effect**: Feature cards that react to mouse position. As the cursor moves over a card, a radial gradient spotlight
+  follows the cursor position within the card (CSS custom properties updated via JS `mousemove`). The spotlight has a
+  hue-shift animation creating an iridescent/holographic shimmer.
+- **Implementation**: Each card listens for `mousemove`, calculates cursor position relative to card bounds, sets
+  `--mouse-x` and `--mouse-y` CSS variables. Card uses
+  `radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(0,255,136,0.15), transparent 60%)` as an overlay.
+- **Border glow**: Cards have a 1px border that glows brighter near the cursor (same radial gradient on `::before`
+  pseudo-element)
 - **Typography**: System sans-serif, feature titles 1.4rem weight 600, descriptions 0.95rem weight 400
 
 ## Palette
@@ -22,12 +27,12 @@ You are building a **tour planner features page** with shader-like glow and hue-
 
 - **Section title**: "Built For Explorers" with subtle gradient text (`background-clip: text`)
 - **6 feature cards** (3x2 grid):
-  1. "Smart Route Planning" — AI-optimized paths with elevation data
-  2. "Offline Maps" — Download regions, navigate without signal
-  3. "Group Sync" — Real-time position sharing with your group
-  4. "Weather Integration" — Live forecasts along your route
-  5. "Photo Timeline" — Auto-organize photos by GPS + timestamp
-  6. "Local Insights" — Hidden gems recommended by local guides
+    1. "Route Drafting" — Pick a start and a summit; legs draw against the contour lines
+    2. "Offline Maps" — Download regions, navigate without signal
+    3. "Group Sync" — Real-time position sharing with your group
+    4. "Weather Integration" — Live forecasts along your route
+    5. "Photo Timeline" — Auto-organize photos by GPS + timestamp
+    6. "Local Insights" — Hidden gems recommended by local guides
 - Each card: unicode/CSS icon at top, title, 2-line description
 
 ## Anti-Patterns

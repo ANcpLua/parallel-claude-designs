@@ -4,10 +4,15 @@ You are building a **tour planner contact page** with a halftone dot spiral vort
 
 ## Visual Identity
 
-- **Effect**: Hundreds of circles arranged in a spiral pattern (Fermat's spiral), with sizes modulated by distance from center and a slow rotation animation. Creates a mesmerizing halftone print effect.
-- **Implementation**: Generate dots via JS on a `<canvas>`. Use golden angle (137.508 degrees) for spiral placement. Dot radius varies with `sin(distance * 0.02 + time * 0.001)`. Entire pattern rotates slowly via canvas `rotate()`. Draw dots as filled circles with varying opacity.
-- **Layout**: Split layout — left side has the halftone canvas (decorative), right side has the contact form. On mobile, canvas becomes a header background behind the form.
-- **Typography**: Clean geometric sans-serif (`'Segoe UI', system-ui, sans-serif`), form labels uppercase 0.75rem letter-spacing 1px
+- **Effect**: Hundreds of circles arranged in a spiral pattern (Fermat's spiral), with sizes modulated by distance from
+  center and a slow rotation animation. Creates a mesmerizing halftone print effect.
+- **Implementation**: Generate dots via JS on a `<canvas>`. Use golden angle (137.508 degrees) for spiral placement. Dot
+  radius varies with `sin(distance * 0.02 + time * 0.001)`. Entire pattern rotates slowly via canvas `rotate()`. Draw
+  dots as filled circles with varying opacity.
+- **Layout**: Split layout — left side has the halftone canvas (decorative), right side has the contact form. On mobile,
+  canvas becomes a header background behind the form.
+- **Typography**: Clean geometric sans-serif (`'Segoe UI', system-ui, sans-serif`), form labels uppercase 0.75rem
+  letter-spacing 1px
 - **Print-inspired aesthetic**: Black and accent on warm paper
 
 ## Palette
@@ -23,11 +28,11 @@ You are building a **tour planner contact page** with a halftone dot spiral vort
 
 - **Left panel**: Canvas with spiral + overlaid text "Get In Touch" in large, light weight
 - **Right panel — Contact form**:
-  - Name input
-  - Email input
-  - Tour interest dropdown (Alpine, Coastal, Desert, Jungle, Arctic)
-  - Message textarea
-  - "Send Message" button
+    - Name input
+    - Email input
+    - Tour interest dropdown (Alpine, Coastal, Desert, Jungle, Arctic)
+    - Message textarea
+    - "Send Message" button
 - Below form: address, email, phone in a small footer
 - Social links row (unicode icons)
 

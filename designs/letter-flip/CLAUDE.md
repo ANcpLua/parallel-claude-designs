@@ -4,10 +4,15 @@ You are building a **tour guide profile page** where names and headings use 3D l
 
 ## Visual Identity
 
-- **Effect**: Each letter in headings is wrapped in a `<span>` with `perspective` and `transform-style: preserve-3d`. On hover (or scroll-in), letters flip 180deg on the X-axis with a stagger delay, revealing a differently-colored back face.
-- **Implementation**: Each letter span has two child spans (front/back) positioned absolutely. CSS `rotateX(180deg)` on hover of the parent word container, `transition-delay` increases per letter index (0.03s increment). `backface-visibility: hidden` on both faces.
+- **Effect**: Each letter in headings is wrapped in a `<span>` with `perspective` and `transform-style: preserve-3d`. On
+  hover (or scroll-in), letters flip 180deg on the X-axis with a stagger delay, revealing a differently-colored back
+  face.
+- **Implementation**: Each letter span has two child spans (front/back) positioned absolutely. CSS `rotateX(180deg)` on
+  hover of the parent word container, `transition-delay` increases per letter index (0.03s increment).
+  `backface-visibility: hidden` on both faces.
 - **Layout**: Single-column profile page — large name at top, bio section, tour stats grid, recent tours list
-- **Typography**: Bold monospace for the flipping name (`'SF Mono', 'Fira Code', monospace`), system sans-serif for body text
+- **Typography**: Bold monospace for the flipping name (`'SF Mono', 'Fira Code', monospace`), system sans-serif for body
+  text
 - **Dark theme with warm accents**
 
 ## Palette
@@ -21,7 +26,8 @@ You are building a **tour guide profile page** where names and headings use 3D l
 
 ## Content
 
-- **Profile header**: Large flipping name "Marco Rossi" + title "Alpine Tour Guide" + circular avatar (CSS gradient placeholder)
+- **Profile header**: Large flipping name "Marco Rossi" + title "Alpine Tour Guide" + circular avatar (CSS gradient
+  placeholder)
 - **Bio**: 2-3 sentences about the guide, with flipping section title "About"
 - **Stats grid** (2x2): "127 Tours Led", "4.97 Rating", "12 Years Exp", "8 Countries"
 - **Recent tours list**: 4 tour items with name, date, difficulty tag, distance

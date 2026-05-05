@@ -4,11 +4,14 @@ You are building a **tour planner landing page** with neon glow reveal navigatio
 
 ## Visual Identity
 
-- **Effect**: Navigation links have neon underline that glows and expands on hover with a pulse animation. Hero text has a neon flicker effect (opacity oscillation via keyframes simulating a neon sign powering on). Background has subtle neon grid lines (perspective-transformed CSS grid) receding to a vanishing point.
+- **Effect**: Navigation links have neon underline that glows and expands on hover with a pulse animation. Hero text has
+  a neon flicker effect (opacity oscillation via keyframes simulating a neon sign powering on). Background has subtle
+  neon grid lines (perspective-transformed CSS grid) receding to a vanishing point.
 - **Implementation**:
-  - Nav underlines: `::after` pseudo-element, `height: 2px`, expands from `width: 0` to `100%` on hover, with `box-shadow: 0 0 10px currentColor, 0 0 20px currentColor`
-  - Neon flicker: `@keyframes flicker` with random opacity steps (1, 0.8, 1, 0.6, 1, 0.9, 1 at various % stops)
-  - Grid: CSS `linear-gradient` creating grid lines on a `<div>` with `perspective: 300px` and `rotateX(60deg)`
+    - Nav underlines: `::after` pseudo-element, `height: 2px`, expands from `width: 0` to `100%` on hover, with
+      `box-shadow: 0 0 10px currentColor, 0 0 20px currentColor`
+    - Neon flicker: `@keyframes flicker` with random opacity steps (1, 0.8, 1, 0.6, 1, 0.9, 1 at various % stops)
+    - Grid: CSS `linear-gradient` creating grid lines on a `<div>` with `perspective: 300px` and `rotateX(60deg)`
 - **Cyberpunk-meets-luxury**: Dark with electric highlights
 
 ## Palette
@@ -23,8 +26,10 @@ You are building a **tour planner landing page** with neon glow reveal navigatio
 
 ## Content
 
-- **Sticky navbar**: Logo "TourPlanner" in neon flicker + nav links: Explore, Features, Pricing, Contact — each with neon underline hover
-- **Hero section**: Large headline "Light Up Your Journey" with neon text-shadow, subtitle below, two CTA buttons ("Explore Tours" magenta glow, "Watch Demo" cyan outline)
+- **Sticky navbar**: Logo "TourPlanner" in neon flicker + nav links: Explore, Features, Pricing, Contact — each with
+  neon underline hover
+- **Hero section**: Large headline "Light Up Your Journey" with neon text-shadow, subtitle below, two CTA buttons ("
+  Explore Tours" magenta glow, "Watch Demo" cyan outline)
 - **Scrolling section**: 3 feature spotlights, each with a neon icon (border circle with glow), title, description
 - **Footer**: Minimal dark footer with neon-accented social links
 
@@ -50,7 +55,9 @@ You are building a **tour planner landing page** with neon glow reveal navigatio
 
 - Single `index.html`, inline CSS
 - CSS-only animations (no JS required except for mobile nav toggle)
-- Perspective grid: `background-image: linear-gradient(rgba(0,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px)`, `background-size: 40px 40px`
+- Perspective grid:
+  `background-image: linear-gradient(rgba(0,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,255,255,0.1) 1px, transparent 1px)`,
+  `background-size: 40px 40px`
 - Sticky nav: `position: sticky; top: 0; z-index: 100`
 - Mobile: hamburger menu toggle (small JS), nav becomes full-screen overlay
 - `<meta name="viewport" content="width=device-width, initial-scale=1">`

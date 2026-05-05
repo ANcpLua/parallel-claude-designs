@@ -1,11 +1,15 @@
 # Dot Matrix — Stats / Metrics Page
 
-You are building a **tour planner stats/metrics page** where numbers and charts are rendered as animated dot matrix grids.
+You are building a **tour planner stats/metrics page** where numbers and charts are rendered as animated dot matrix
+grids.
 
 ## Visual Identity
 
-- **Effect**: Key metrics displayed as large numbers composed of small dots in a grid pattern (like an LED display). When a number changes or loads, dots animate into position (scale from 0 to 1 with stagger). A live-updating feel — numbers occasionally tick up with dot reformation.
-- **Implementation**: Canvas-based dot grid. Define each digit (0-9) as a 5x7 boolean matrix. Render dots at calculated positions. On number change, animate each dot's scale using spring physics. Green-on-black terminal aesthetic.
+- **Effect**: Key metrics displayed as large numbers composed of small dots in a grid pattern (like an LED display).
+  When a number changes or loads, dots animate into position (scale from 0 to 1 with stagger). A live-updating feel —
+  numbers occasionally tick up with dot reformation.
+- **Implementation**: Canvas-based dot grid. Define each digit (0-9) as a 5x7 boolean matrix. Render dots at calculated
+  positions. On number change, animate each dot's scale using spring physics. Green-on-black terminal aesthetic.
 - **Layout**: Dashboard grid — 4 large KPI panels at top, a dot-matrix bar chart below, activity ticker at bottom
 - **Typography**: Monospace only (`'SF Mono', 'Fira Code', 'Courier New', monospace`), uppercase labels
 
@@ -21,12 +25,13 @@ You are building a **tour planner stats/metrics page** where numbers and charts 
 ## Content
 
 - **4 KPI panels** (dot matrix numbers):
-  - "Total Tours": 12,847 (ticks up by 1 every 5s)
-  - "Active Users": 3,291
-  - "Km Explored": 847,203
-  - "Avg Rating": 4.87
+    - "Total Tours": 12,847 (ticks up by 1 every 5s)
+    - "Active Users": 3,291
+    - "Km Explored": 847,203
+    - "Avg Rating": 4.87
 - **Bar chart** (below): 7 bars representing "Tours This Week" (Mon-Sun), each bar made of stacked dots, heights vary
-- **Activity ticker** (bottom): scrolling single line — "Marco completed Alpine Ridge · Sarah started Coastal Path · Team Bravo finished Desert Trek" — marquee-style but smooth CSS animation
+- **Activity ticker** (bottom): scrolling single line — "Marco completed Alpine Ridge · Sarah started Coastal Path ·
+  Team Bravo finished Desert Trek" — marquee-style but smooth CSS animation
 
 ## Anti-Patterns
 

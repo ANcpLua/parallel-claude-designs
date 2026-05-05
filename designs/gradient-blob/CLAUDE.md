@@ -4,10 +4,14 @@ You are building a **tour planner pricing page** with animated gradient blob sha
 
 ## Visual Identity
 
-- **Effect**: 3-4 large amorphous blob shapes made with CSS `border-radius` (set to organic values like `60% 40% 30% 70% / 60% 30% 70% 40%`) filled with gradients, animated to morph shape continuously using `@keyframes` that cycle through different border-radius values.
-- **Implementation**: Each blob is a `<div>` with `position: absolute`, `width/height: 300-500px`, gradient backgrounds, `filter: blur(40px)`, animated with CSS `@keyframes morph` changing `border-radius` over 15-20s, infinite, alternate.
+- **Effect**: 3-4 large amorphous blob shapes made with CSS `border-radius` (set to organic values like
+  `60% 40% 30% 70% / 60% 30% 70% 40%`) filled with gradients, animated to morph shape continuously using `@keyframes`
+  that cycle through different border-radius values.
+- **Implementation**: Each blob is a `<div>` with `position: absolute`, `width/height: 300-500px`, gradient backgrounds,
+  `filter: blur(40px)`, animated with CSS `@keyframes morph` changing `border-radius` over 15-20s, infinite, alternate.
 - **Layout**: 3 pricing tiers in a row, center tier elevated/highlighted
-- **Cards**: White/light cards with strong `border-radius: 24px`, subtle shadow, the highlighted tier has a gradient border (using background-clip trick)
+- **Cards**: White/light cards with strong `border-radius: 24px`, subtle shadow, the highlighted tier has a gradient
+  border (using background-clip trick)
 - **Typography**: System sans-serif, price numbers `clamp(2.5rem, 5vw, 3.5rem)` weight 700
 
 ## Palette
@@ -24,9 +28,9 @@ You are building a **tour planner pricing page** with animated gradient blob sha
 
 - **Page title**: "Choose Your Journey" centered above cards
 - **3 tiers**:
-  - **Explorer** ($9/mo): 5 tours/month, basic routes, email support
-  - **Adventurer** ($29/mo, featured): unlimited tours, AI optimization, priority support, offline maps
-  - **Expedition** ($79/mo): everything + team management, API access, dedicated guide
+    - **Explorer** ($9/mo): 5 tours/month, basic routes, email support
+    - **Adventurer** ($29/mo, featured): unlimited tours, elevation and water-source overlays, priority support, offline maps
+    - **Expedition** ($79/mo): everything + team management, API access, dedicated guide
 - Each card: tier name, price, feature list with checkmark icons, CTA button
 - Below cards: "All plans include 14-day free trial" centered text
 - FAQ toggle section (3 questions) with smooth expand/collapse

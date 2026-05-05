@@ -4,12 +4,16 @@ You are building a **tour planner 404 page** with a black hole gravitational pul
 
 ## Visual Identity
 
-- **Effect**: A central black circle with an animated accretion disk (rotating gradient ring) and gravitational lensing effect. Stars (small dots) around the page slowly drift toward the center, accelerating as they approach. The "404" text orbits at the edge of the accretion disk.
+- **Effect**: A central black circle with an animated accretion disk (rotating gradient ring) and gravitational lensing
+  effect. Stars (small dots) around the page slowly drift toward the center, accelerating as they approach. The "404"
+  text orbits at the edge of the accretion disk.
 - **Implementation**:
-  - Accretion disk: `conic-gradient` ring (donut shape via `border-radius: 50%` + inner transparent circle), animated with CSS `@keyframes rotate` (8s, linear, infinite)
-  - Stars: `<canvas>` with ~100 small white dots. Each star has a velocity vector pulling toward center (`attraction = G / distance^2`), wraps around when consumed by center. Draw with slight trails.
-  - "404": Positioned on the accretion disk ring, CSS `@keyframes orbit` rotating around the center
-  - Gravitational lens: `filter: url(#distort)` SVG displacement filter on background near center
+    - Accretion disk: `conic-gradient` ring (donut shape via `border-radius: 50%` + inner transparent circle), animated
+      with CSS `@keyframes rotate` (8s, linear, infinite)
+    - Stars: `<canvas>` with ~100 small white dots. Each star has a velocity vector pulling toward center (
+      `attraction = G / distance^2`), wraps around when consumed by center. Draw with slight trails.
+    - "404": Positioned on the accretion disk ring, CSS `@keyframes orbit` rotating around the center
+    - Gravitational lens: `filter: url(#distort)` SVG displacement filter on background near center
 - **Central void**: Pure black circle, `box-shadow: 0 0 80px 40px rgba(0,0,0,0.8)` for depth
 - **Typography**: System sans-serif, "404" at `clamp(4rem, 10vw, 8rem)` weight 100
 
@@ -51,10 +55,12 @@ You are building a **tour planner 404 page** with a black hole gravitational pul
 
 - Single `index.html`, inline CSS + JS
 - `<canvas>` full viewport for stars, `pointer-events: none`
-- Accretion disk: CSS-only rotating donut shape (element with `border-radius: 50%`, inner `mask: radial-gradient(circle, transparent 40%, black 41%)`)
+- Accretion disk: CSS-only rotating donut shape (element with `border-radius: 50%`, inner
+  `mask: radial-gradient(circle, transparent 40%, black 41%)`)
 - Star physics: `requestAnimationFrame`, gravitational formula per star
 - Star recycling: when distance < 20px from center, respawn at random edge position
-- "404" orbit: CSS `@keyframes orbit { from { transform: rotate(0deg) translateX(150px) rotate(0deg); } to { transform: rotate(360deg) translateX(150px) rotate(-360deg); } }`
+- "404" orbit: CSS
+  `@keyframes orbit { from { transform: rotate(0deg) translateX(150px) rotate(0deg); } to { transform: rotate(360deg) translateX(150px) rotate(-360deg); } }`
 - Responsive: reduce star count on mobile, accretion disk scales with viewport
 - `<meta name="viewport" content="width=device-width, initial-scale=1">`
 - `<meta name="color-scheme" content="dark">`

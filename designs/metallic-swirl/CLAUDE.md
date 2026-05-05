@@ -4,9 +4,14 @@ You are building a **tour planner auth/login page** with a metallic conic-gradie
 
 ## Visual Identity
 
-- **Effect**: Full-viewport animated metallic swirl using `conic-gradient` that rotates slowly. The gradient mimics brushed metal with alternating light/dark bands. The login card sits centered over this swirl.
-- **Implementation**: A full-screen `<div>` with `background: conic-gradient(from var(--angle), #c0c0c0, #2a2a2a, #c0c0c0, #ffd700, #c0c0c0, #2a2a2a, #c0c0c0)`. JS animates `--angle` from 0deg to 360deg over 20s using `requestAnimationFrame`. CSS `@property --angle` registered for smooth interpolation (or JS fallback).
-- **Login card**: Elevated white/light card with strong shadow, centered vertically and horizontally, `border-radius: 16px`, `max-width: 420px`
+- **Effect**: Full-viewport animated metallic swirl using `conic-gradient` that rotates slowly. The gradient mimics
+  brushed metal with alternating light/dark bands. The login card sits centered over this swirl.
+- **Implementation**: A full-screen `<div>` with
+  `background: conic-gradient(from var(--angle), #c0c0c0, #2a2a2a, #c0c0c0, #ffd700, #c0c0c0, #2a2a2a, #c0c0c0)`. JS
+  animates `--angle` from 0deg to 360deg over 20s using `requestAnimationFrame`. CSS `@property --angle` registered for
+  smooth interpolation (or JS fallback).
+- **Login card**: Elevated white/light card with strong shadow, centered vertically and horizontally,
+  `border-radius: 16px`, `max-width: 420px`
 - **Typography**: System sans-serif, clean and corporate
 
 ## Palette
@@ -22,11 +27,11 @@ You are building a **tour planner auth/login page** with a metallic conic-gradie
 
 - **Card header**: TourPlanner logo (CSS styled text) + "Welcome Back"
 - **Login form**:
-  - Email input with label
-  - Password input with label + show/hide toggle button
-  - "Remember me" checkbox
-  - "Sign In" button (full width)
-  - "Forgot password?" link
+    - Email input with label
+    - Password input with label + show/hide toggle button
+    - "Remember me" checkbox
+    - "Sign In" button (full width)
+    - "Forgot password?" link
 - **Divider**: "or continue with" horizontal rule with text
 - **Social login**: 2 buttons — "Google" and "GitHub" (styled as outlined buttons)
 - **Footer text**: "Don't have an account? Sign up"

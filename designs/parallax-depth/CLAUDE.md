@@ -1,13 +1,20 @@
 # Parallax Depth — How It Works Page
 
-You are building a **tour planner "How It Works" page** where cards have mouse-tracking parallax depth with 3D perspective.
+You are building a **tour planner "How It Works" page** where cards have mouse-tracking parallax depth with 3D
+perspective.
 
 ## Visual Identity
 
-- **Effect**: Cards tilt in 3D based on mouse position. Internal elements (icon, title, description) each have different `translateZ` values, creating a layered depth effect. Card surface catches a specular highlight that moves with the cursor.
-- **Implementation**: JS `mousemove` on each card calculates tilt angles (`rotateX/Y` max 15deg). Card has `transform-style: preserve-3d` + `perspective: 800px` on parent. Children use `transform: translateZ(20px/40px/60px)` for depth layering. Specular highlight: `::after` with radial gradient follows mouse.
-- **Layout**: 4 steps arranged vertically with alternating left/right alignment (zigzag), connected by a vertical line/timeline
-- **Typography**: System sans-serif, step numbers in oversized light weight (`4rem`, weight 200), titles `1.5rem` weight 600
+- **Effect**: Cards tilt in 3D based on mouse position. Internal elements (icon, title, description) each have different
+  `translateZ` values, creating a layered depth effect. Card surface catches a specular highlight that moves with the
+  cursor.
+- **Implementation**: JS `mousemove` on each card calculates tilt angles (`rotateX/Y` max 15deg). Card has
+  `transform-style: preserve-3d` + `perspective: 800px` on parent. Children use `transform: translateZ(20px/40px/60px)`
+  for depth layering. Specular highlight: `::after` with radial gradient follows mouse.
+- **Layout**: 4 steps arranged vertically with alternating left/right alignment (zigzag), connected by a vertical
+  line/timeline
+- **Typography**: System sans-serif, step numbers in oversized light weight (`4rem`, weight 200), titles `1.5rem` weight
+  600
 
 ## Palette
 
@@ -22,10 +29,10 @@ You are building a **tour planner "How It Works" page** where cards have mouse-t
 
 - **Page title**: "How TourPlanner Works" centered, with timeline below
 - **4 steps** (each a parallax card):
-  1. "Choose Your Destination" — Search from 200+ regions, filter by difficulty and season
-  2. "Customize Your Route" — AI suggests optimal paths, drag to adjust waypoints
-  3. "Invite Your Group" — Share a link, everyone sees the plan in real-time
-  4. "Hit The Trail" — Offline maps, turn-by-turn, live weather alerts
+    1. "Choose Your Destination" — Search from 200+ regions, filter by difficulty and season
+    2. "Customize Your Route" — Drop waypoints, swap any leg the route picker draws, lock the rest stops you need
+    3. "Invite Your Group" — Share a link, everyone sees the plan in real-time
+    4. "Hit The Trail" — Offline maps, turn-by-turn, live weather alerts
 - Each card: large step number, icon (unicode), title, 2-line description
 - **Bottom CTA**: "Ready to explore?" with "Start Free Trial" button
 - Timeline connector: dashed vertical line with dot markers at each step

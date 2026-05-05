@@ -4,8 +4,11 @@ You are building a **tour planner about page** where the headline is rendered as
 
 ## Visual Identity
 
-- **Effect**: Text drawn on canvas, composed of hundreds of tiny circles. On mouse hover, particles scatter outward with spring physics, then reform. On mobile, particles auto-animate a gentle breathing pulse.
-- **Implementation**: Offscreen canvas renders text with `fillText()`, `getImageData()` samples pixel positions, particles animate toward those positions using spring dynamics (`velocity += (target - current) * stiffness - velocity * damping`)
+- **Effect**: Text drawn on canvas, composed of hundreds of tiny circles. On mouse hover, particles scatter outward with
+  spring physics, then reform. On mobile, particles auto-animate a gentle breathing pulse.
+- **Implementation**: Offscreen canvas renders text with `fillText()`, `getImageData()` samples pixel positions,
+  particles animate toward those positions using spring dynamics (
+  `velocity += (target - current) * stiffness - velocity * damping`)
 - **Background**: Dark gradient (`#0d1117` to `#161b22`), subtle radial glow behind canvas
 - **Below canvas**: Glass-backed content cards with company info, team stats, mission statement
 - **Typography**: Canvas text uses bold sans-serif at ~80px. HTML body text uses system sans-serif, 1.6 line-height
@@ -20,7 +23,8 @@ You are building a **tour planner about page** where the headline is rendered as
 ## Content
 
 - Canvas headline: "About TourPlanner"
-- Cards below: "Our Mission" (route optimization AI), "The Team" (passionate travelers + engineers), "By Numbers" (50k routes, 200 countries, 99.9% uptime)
+- Cards below: "Our Mission" (mapping the footpaths the big atlases miss), "The Team" (guides, cartographers, two engineers), "By Numbers" (50k
+  routes, 200 countries, 99.9% uptime)
 - Each card has an icon (CSS-drawn or unicode), title, short paragraph
 
 ## Anti-Patterns

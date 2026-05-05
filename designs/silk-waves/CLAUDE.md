@@ -4,10 +4,14 @@ You are building a **tour planner waitlist/landing page** with smooth animated s
 
 ## Visual Identity
 
-- **Effect**: Multiple layered SVG wave paths that animate continuously, creating a flowing silk/ribbon feel. 3-4 wave layers at different speeds and opacities stacked at the bottom third of the page.
-- **Implementation**: SVG `<path>` elements with cubic bezier curves. Animate the `d` attribute via JS (interpolate between two path states) or use CSS `@keyframes` on `transform: translateX()` with duplicated paths for seamless looping.
+- **Effect**: Multiple layered SVG wave paths that animate continuously, creating a flowing silk/ribbon feel. 3-4 wave
+  layers at different speeds and opacities stacked at the bottom third of the page.
+- **Implementation**: SVG `<path>` elements with cubic bezier curves. Animate the `d` attribute via JS (interpolate
+  between two path states) or use CSS `@keyframes` on `transform: translateX()` with duplicated paths for seamless
+  looping.
 - **Layout**: Full-viewport hero with centered content above waves, clean and spacious
-- **Typography**: Elegant serif for headlines (`Georgia, 'Times New Roman', serif`), sans-serif for body. Headline `clamp(2.8rem, 7vw, 5rem)` weight 300 with generous letter-spacing
+- **Typography**: Elegant serif for headlines (`Georgia, 'Times New Roman', serif`), sans-serif for body. Headline
+  `clamp(2.8rem, 7vw, 5rem)` weight 300 with generous letter-spacing
 - **Warm, premium feel**: Like a luxury travel brand
 
 ## Palette
@@ -21,11 +25,11 @@ You are building a **tour planner waitlist/landing page** with smooth animated s
 ## Content
 
 - Small top logo text: "TourPlanner" in small caps
-- Headline: "Curated Journeys, Crafted For You"
-- Subtitle: "Join the waitlist for early access to AI-powered tour planning"
+- Headline: "Tours Drawn by Guides Who Live There"
+- Subtitle: "Early access opens in May. Drop your email for the first 200 invites."
 - Email input + "Join Waitlist" button in a single row
 - Below: "2,847 travelers already waiting" with small avatar stack (5 colored circles overlapping)
-- At very bottom (above waves): 3 feature icons in a row — "Smart Routes", "Local Guides", "Group Sync"
+- At very bottom (above waves): 3 feature icons in a row — "Drafted Routes", "Local Guides", "Group Sync"
 
 ## Anti-Patterns
 

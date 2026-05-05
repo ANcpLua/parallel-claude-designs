@@ -127,6 +127,97 @@ ANIMATIONS=(
   "PixelTransition|Pixel-dissolve page transition"
 )
 
+# Pro blocks from @reactbits-pro registry. Slug = kebab(name) + "-tw".
+# Install: `npx shadcn@latest add @reactbits-pro/<slug>` (Pro/Ultimate tier required).
+# Descriptions are best-guess from name; agent recreates the effect in vanilla CSS/JS anyway.
+BLOCKS=(
+  "3d-letter-swap-tw|Letters flip through 3D space to swap values"
+  "3d-text-reveal-tw|Headline reveals with 3D perspective rotation"
+  "agentic-ball-tw|AI agent orb with pulse/listen/speak states"
+  "ai-blob-tw|Generative AI blob with morphing gradients"
+  "ascii-cursor-tw|Cursor rendered as live ASCII characters"
+  "ascii-waves-tw|Wave field rendered in ASCII glyphs"
+  "aurora-blur-tw|Aurora gradient with heavy bloom/blur diffusion"
+  "black-hole-tw|Gravitational lens / event-horizon shader"
+  "blur-highlight-tw|Blurred color swatch highlight behind inline text"
+  "blurred-rays-tw|Soft blurred light rays radiating from a source"
+  "center-flow-tw|Radial flow lines converging on page center"
+  "chroma-card-tw|Card with chromatic aberration split on hover"
+  "chroma-waves-tw|RGB-split wave field"
+  "circle-gallery-tw|Image gallery laid out around a circle"
+  "circles-tw|Overlapping animated color circles"
+  "click-stack-tw|Stacked cards that fan out on click"
+  "color-loops-tw|Looping color-cycle gradient band"
+  "comparison-slider-tw|Before/after image reveal with draggable handle"
+  "credit-card-tw|Animated 3D credit card mock"
+  "custom-cursor-tw|Replaceable custom cursor template"
+  "depth-card-tw|Card with parallax depth layers"
+  "device-tw|Device (phone/laptop) mockup with screen content"
+  "dither-cursor-tw|Dithered pixel trail cursor"
+  "dither-wave-tw|Dithered pixel wave background"
+  "dot-shift-tw|Dot grid that shifts on pointer proximity"
+  "draggable-grid-tw|Grid of tiles you can drag and rearrange"
+  "falling-rays-tw|Light rays falling from top of viewport"
+  "flame-paths-tw|Flame-like streaks tracing SVG paths"
+  "frame-border-tw|Animated decorative frame border for sections"
+  "glass-cursor-tw|Glass/refraction cursor lens"
+  "glass-flow-tw|Flowing frosted-glass stripes"
+  "glitter-warp-tw|Glittering particle warp tunnel"
+  "globe-tw|Interactive 3D globe with markers/arcs"
+  "gradient-bars-tw|Vertical gradient bars with animated fill"
+  "gradient-blob-tw|Soft morphing gradient blob background"
+  "gradient-carousel-tw|Carousel whose background shifts gradient per slide"
+  "grain-wave-tw|Grainy noise + wave composite background"
+  "halftone-vortex-tw|Halftone dots swirling into a vortex"
+  "halftone-wave-tw|Halftone dot wave field"
+  "hover-preview-tw|Link hover shows floating preview card"
+  "infinite-gallery-tw|Endless scrolling image gallery"
+  "light-droplets-tw|Glowing liquid droplets drifting upward"
+  "lightspeed-tw|Starfield streaking into lightspeed"
+  "liquid-ascii-tw|Liquid flow rendered in ASCII"
+  "liquid-bars-tw|Vertical bars flowing like liquid"
+  "liquid-lines-tw|Flowing liquid stripes background"
+  "liquid-swap-tw|Liquid morph transition between two states"
+  "metallic-swirl-tw|Metallic chrome swirl shader"
+  "modal-cards-tw|Stacked modal cards with depth transitions"
+  "mosaic-tw|Animated mosaic tile composition"
+  "neon-reveal-tw|Neon outline that draws on to reveal content"
+  "parallax-cards-tw|Cards with multi-layer parallax on scroll"
+  "particle-text-tw|Text formed from animated particles"
+  "perspective-grid-tw|Perspective grid floor / Tron-style"
+  "pixelate-hover-tw|Element pixelates in/out on hover"
+  "portal-tw|Circular portal effect revealing another scene"
+  "preloader-tw|Branded page preloader / intro sequence"
+  "radial-liquid-tw|Radial liquid bloom from a center point"
+  "retro-lines-tw|Retro 80s horizon line gradient"
+  "rising-lines-tw|Vertical lines rising with stagger"
+  "rotating-cards-tw|Cards that rotate around an axis"
+  "rotating-stars-tw|Star field rotating around the viewport"
+  "rubber-fluid-tw|Rubber/fluid blob deformation"
+  "shader-card-tw|Card whose surface is a live shader"
+  "shader-reveal-tw|Shader-driven reveal transition"
+  "shader-waves-tw|Generic shader wave background"
+  "shadow-bars-tw|Animated long-shadow bars composition"
+  "silk-waves-tw|Silk fabric wave background"
+  "simple-graph-tw|Minimal animated line/area chart"
+  "simple-swirl-tw|Minimal swirling gradient"
+  "smooth-cursor-tw|Smoothly interpolated cursor follower"
+  "square-matrix-tw|Grid of squares pulsing in patterns"
+  "squircle-shift-tw|Squircle shapes shifting / morphing"
+  "staggered-text-tw|Staggered letter reveal animation"
+  "star-burst-tw|Star burst radial lines emanation"
+  "star-swipe-tw|Star-shaped wipe transition"
+  "swirl-blend-tw|Two colors swirling and blending"
+  "synaptic-shift-tw|Synaptic network nodes firing/shifting"
+  "text-cube-tw|Words displayed on faces of a rotating cube"
+  "text-path-tw|Text following a curved SVG path"
+  "text-scatter-tw|Letters scatter apart and reassemble"
+  "vortex-tw|Particle vortex centered on viewport"
+  "warp-twister-tw|Twisting warp distortion shader"
+  "warped-card-tw|Card with warp/bulge lens distortion"
+  "watercolor-tw|Watercolor paint bleed background"
+)
+
 PAGE_TYPES=(
   "landing page with hero, features section, and CTA"
   "portfolio showcase with project grid and bio"
@@ -182,7 +273,7 @@ pick_n_unique() {
 generate_claude_md() {
   local bg_entry="$1" theme="$2" page_type="$3"
   shift 3
-  local -a text_entries=() comp_entries=() anim_entries=()
+  local -a text_entries=() comp_entries=() anim_entries=() block_entries=()
 
   # Parse remaining args (prefixed with category)
   while [[ $# -gt 0 ]]; do
@@ -190,6 +281,7 @@ generate_claude_md() {
       TEXT:*) text_entries+=("${1#TEXT:}") ;;
       COMP:*) comp_entries+=("${1#COMP:}") ;;
       ANIM:*) anim_entries+=("${1#ANIM:}") ;;
+      BLOCK:*) block_entries+=("${1#BLOCK:}") ;;
     esac
     shift
   done
@@ -230,6 +322,13 @@ $(for entry in "${anim_entries[@]}"; do
   local name="${entry%%|*}" desc="${entry#*|}"
   echo "- **${name}**: ${desc}"
   echo "  Install: \`npx shadcn@latest add @react-bits/${name}-TS-TW\`"
+done)
+
+### Featured Block (ReactBits Pro)
+$(for entry in "${block_entries[@]}"; do
+  local slug="${entry%%|*}" desc="${entry#*|}"
+  echo "- **${slug}**: ${desc}"
+  echo "  Install: \`npx shadcn@latest add @reactbits-pro/${slug}\` (requires Pro/Ultimate license)"
 done)
 
 ## Rules
@@ -286,6 +385,7 @@ for ((i=1; i<=COUNT; i++)); do
   comp_picks=()
   while IFS= read -r line; do comp_picks+=("COMP:$line"); done < <(pick_n_unique $comp_count "${COMPONENTS[@]}")
   anim_pick="ANIM:$(pick_random "${ANIMATIONS[@]}")"
+  block_pick="BLOCK:$(pick_random "${BLOCKS[@]}")"
 
   bg_name="${bg%%|*}"
 
@@ -300,7 +400,7 @@ for ((i=1; i<=COUNT; i++)); do
   rm -rf "/tmp/$slug/reactbits-showcase"
 
   # Generate CLAUDE.md
-  generate_claude_md "$bg" "$theme" "$page_type" "${text_picks[@]}" "${comp_picks[@]}" "$anim_pick" > "/tmp/$slug/CLAUDE.md"
+  generate_claude_md "$bg" "$theme" "$page_type" "${text_picks[@]}" "${comp_picks[@]}" "$anim_pick" "$block_pick" > "/tmp/$slug/CLAUDE.md"
 
   echo "  ${c}●${RESET} ${BOLD}${slug}${RESET} ${DIM}— ${bg_name} + ${page_type}${RESET}"
 

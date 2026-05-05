@@ -4,9 +4,14 @@ You are building a **tour planner CTA/conversion page** with animated flame/fire
 
 ## Visual Identity
 
-- **Effect**: SVG paths define flowing curves across the page. Particles travel along these paths, leaving a glowing trail that fades — creating a flame/fire-trail aesthetic. The particles emit from the CTA button area and flow outward, drawing the eye inward.
-- **Implementation**: Define 3-4 `<path>` elements in SVG. JS calculates points along each path using `getPointAtLength()`. Particles are small circles that move along the path, drawn on a canvas overlay. Each particle has a short trail (store last 10 positions, draw with decreasing opacity and size).
-- **Layout**: Full-viewport centered CTA section with large headline, supporting text, and a prominent CTA button. SVG/canvas trails wrap around the content.
+- **Effect**: SVG paths define flowing curves across the page. Particles travel along these paths, leaving a glowing
+  trail that fades — creating a flame/fire-trail aesthetic. The particles emit from the CTA button area and flow
+  outward, drawing the eye inward.
+- **Implementation**: Define 3-4 `<path>` elements in SVG. JS calculates points along each path using
+  `getPointAtLength()`. Particles are small circles that move along the path, drawn on a canvas overlay. Each particle
+  has a short trail (store last 10 positions, draw with decreasing opacity and size).
+- **Layout**: Full-viewport centered CTA section with large headline, supporting text, and a prominent CTA button.
+  SVG/canvas trails wrap around the content.
 - **Typography**: System sans-serif, headline `clamp(2rem, 5vw, 3.5rem)` weight 700, body weight 400
 
 ## Palette
@@ -21,7 +26,7 @@ You are building a **tour planner CTA/conversion page** with animated flame/fire
 ## Content
 
 - **Headline**: "Your Adventure Starts Now"
-- **Subtext**: "Join 50,000+ explorers who plan smarter, travel farther, and discover more"
+- **Subtext**: "50,000+ guides and walkers already plan their seasons here"
 - **CTA button**: "Start Your Free Trial" — large, 56px height, 24px horizontal padding, `border-radius: 12px`
 - **Below CTA**: "No credit card required · 14-day free trial · Cancel anytime"
 - **Trust logos row**: 5 placeholder brand rectangles ("Featured in...") with low opacity

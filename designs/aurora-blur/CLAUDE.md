@@ -5,9 +5,12 @@ You are building a **tour planner hero section** with an animated aurora boreali
 ## Visual Identity
 
 - **Effect**: Animated aurora — 3-4 large soft gradient blobs drifting slowly, heavily blurred
-- **Implementation**: Absolutely positioned `<div>` elements with large `border-radius: 50%`, CSS `filter: blur(80px)`, animated via `@keyframes` (translate + scale + rotate, 20-30s duration, infinite, alternate)
-- **Foreground**: Frosted glass card (`backdrop-filter: blur(20px)`, `background: rgba(255,255,255,0.08)`, `border: 1px solid rgba(255,255,255,0.15)`, `border-radius: 24px`) containing headline, subtitle, CTA
-- **Typography**: System sans-serif `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`, headline `clamp(2.5rem, 6vw, 4.5rem)` weight 300
+- **Implementation**: Absolutely positioned `<div>` elements with large `border-radius: 50%`, CSS `filter: blur(80px)`,
+  animated via `@keyframes` (translate + scale + rotate, 20-30s duration, infinite, alternate)
+- **Foreground**: Frosted glass card (`backdrop-filter: blur(20px)`, `background: rgba(255,255,255,0.08)`,
+  `border: 1px solid rgba(255,255,255,0.15)`, `border-radius: 24px`) containing headline, subtitle, CTA
+- **Typography**: System sans-serif `-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`, headline
+  `clamp(2.5rem, 6vw, 4.5rem)` weight 300
 - **Overflow**: `overflow: hidden` on body to contain aurora blobs
 
 ## Palette
@@ -19,8 +22,8 @@ You are building a **tour planner hero section** with an animated aurora boreali
 
 ## Content
 
-- Headline: "Discover Your Next Adventure"
-- Subtitle: "Plan, explore, and share tours with intelligent route optimization"
+- Headline: "Plot the Next Ridge Line"
+- Subtitle: "Multi-day routes with elevation, water sources, and refuge huts on one map"
 - CTA: "Start Planning" button with hover glow (`box-shadow: 0 0 30px rgba(123,104,238,0.5)`)
 - Below CTA: 3 stat pills in a flex row ("10k+ Tours", "150 Countries", "4.9 Rating")
 

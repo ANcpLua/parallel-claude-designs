@@ -4,9 +4,14 @@ You are building a **tour planning dashboard** with flowing glassmorphic cards a
 
 ## Visual Identity
 
-- **Effect**: Multiple frosted glass cards float over an animated gradient mesh background. Cards have a subtle continuous drift animation (translateY oscillation, 6-8s, alternate). A custom cursor (glass circle, 40px diameter, `backdrop-filter: blur(8px)`) follows the mouse with eased lerp.
-- **Background**: Animated mesh gradient — 4 large color spots with `filter: blur(100px)` slowly orbiting, creating an organic gradient mesh
-- **Cards**: `backdrop-filter: blur(16px)`, `background: rgba(255,255,255,0.06)`, `border: 1px solid rgba(255,255,255,0.12)`, `border-radius: 20px`, inner glow via `box-shadow: inset 0 0 30px rgba(255,255,255,0.05)`
+- **Effect**: Multiple frosted glass cards float over an animated gradient mesh background. Cards have a subtle
+  continuous drift animation (translateY oscillation, 6-8s, alternate). A custom cursor (glass circle, 40px diameter,
+  `backdrop-filter: blur(8px)`) follows the mouse with eased lerp.
+- **Background**: Animated mesh gradient — 4 large color spots with `filter: blur(100px)` slowly orbiting, creating an
+  organic gradient mesh
+- **Cards**: `backdrop-filter: blur(16px)`, `background: rgba(255,255,255,0.06)`,
+  `border: 1px solid rgba(255,255,255,0.12)`, `border-radius: 20px`, inner glow via
+  `box-shadow: inset 0 0 30px rgba(255,255,255,0.05)`
 - **Typography**: System sans-serif, section headers weight 200 letter-spacing 2px uppercase
 
 ## Palette
@@ -21,9 +26,9 @@ You are building a **tour planning dashboard** with flowing glassmorphic cards a
 - **Top bar**: "TourPlanner Dashboard" title + user avatar circle
 - **Sidebar** (left, glass): Nav links — Overview, My Tours, Analytics, Settings (with unicode icons)
 - **Main grid** (3 cards):
-  - "Active Tours" — number counter (7), mini list of 3 tour names
-  - "Distance This Month" — large number "342 km" with a simple CSS bar chart (4 bars)
-  - "Upcoming" — next tour card with date, name, difficulty badge
+    - "Active Tours" — number counter (7), mini list of 3 tour names
+    - "Distance This Month" — large number "342 km" with a simple CSS bar chart (4 bars)
+    - "Upcoming" — next tour card with date, name, difficulty badge
 - **Bottom card** (full width): "Recent Activity" — 4 rows showing recent tour completions
 
 ## Anti-Patterns

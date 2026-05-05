@@ -4,8 +4,11 @@ You are building a **tour showcase gallery** with liquid morphing transitions be
 
 ## Visual Identity
 
-- **Effect**: SVG `<feTurbulence>` + `<feDisplacementMap>` filter applied during transitions. When clicking a tour card, the current view dissolves with a liquid/water distortion before the next card morphs in.
-- **Implementation**: SVG filter defined inline. Transition triggered by toggling a CSS class that animates `baseFrequency` of `<feTurbulence>` from 0 to 0.04 and back via JS (animate the attribute over ~800ms). Cards cross-fade while the filter distorts.
+- **Effect**: SVG `<feTurbulence>` + `<feDisplacementMap>` filter applied during transitions. When clicking a tour card,
+  the current view dissolves with a liquid/water distortion before the next card morphs in.
+- **Implementation**: SVG filter defined inline. Transition triggered by toggling a CSS class that animates
+  `baseFrequency` of `<feTurbulence>` from 0 to 0.04 and back via JS (animate the attribute over ~800ms). Cards
+  cross-fade while the filter distorts.
 - **Layout**: 2-column masonry-style grid of tour cards on desktop, single column on mobile
 - **Cards**: Full-bleed image with gradient overlay at bottom for text, `border-radius: 20px`, subtle shadow
 - **Typography**: System sans-serif, card titles `clamp(1.2rem, 3vw, 1.8rem)` weight 600
@@ -20,7 +23,8 @@ You are building a **tour showcase gallery** with liquid morphing transitions be
 
 ## Content
 
-- 6 tour cards: "Alpine Peaks Trail", "Coastal Sunset Route", "Ancient Temple Walk", "Desert Oasis Trek", "Rainforest Canopy Path", "Arctic Aurora Route"
+- 6 tour cards: "Alpine Peaks Trail", "Coastal Sunset Route", "Ancient Temple Walk", "Desert Oasis Trek", "Rainforest
+  Canopy Path", "Arctic Aurora Route"
 - Each card: placeholder gradient background (since no real images), location tag, difficulty badge, duration, rating
 - A detail panel slides up when a card is selected (with liquid transition)
 
